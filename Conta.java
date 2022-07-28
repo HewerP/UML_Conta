@@ -34,7 +34,7 @@ abstract class Conta{
     }
 
     public void addSaldo(double saldo) {
-        if (this.saldo <= saldo){
+        if (this.saldo <= saldo || saldo >= 0){
             this.saldo += saldo;
             if(saldo>=0){
                 extrato.add("Depósito de " + saldo + "Reais");
